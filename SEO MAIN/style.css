@@ -1,0 +1,353 @@
+/* Google Font Import */
+@import url('https://fonts.googleapis.com/css2?family=Poppins:wght@300;600;700;800&display=swap'); /* Added 800 weight */
+
+/* Define CSK Brand Colors */
+:root {
+    --csk-yellow: #ebbe07; /* Bright CSK Yellow */
+    --csk-blue: #002d62; /* Deep CSK Blue */
+    --background-light-yellow: #fffde7; /* Very light, creamy yellow for the body background */
+    --text-dark: #333;
+    --text-light: #ffffff;
+    --section-bg: #f7f7f7; /* Light gray for section contrast */
+}
+
+/* General Styles */
+body {
+    font-family: 'Poppins', sans-serif;
+    margin: 0;
+    padding: 0;
+    line-height: 1.6;
+    background-color: var(--background-light-yellow); 
+    color: var(--text-dark);
+}
+
+/* --- New and Enhanced Header & Navigation Styles --- */
+header {
+    /* Updated background: Use a gradient for dynamic look */
+    background: linear-gradient(90deg, var(--csk-blue) 0%, var(--csk-yellow) 100%); 
+    
+    color: var(--text-light); /* Text color changed to white for contrast */
+    padding: 20px 40px; /* Enhanced padding */
+    
+    /* Make it a sticky header for interactivity */
+    position: sticky;
+    top: 0;
+    z-index: 1000; /* Ensure it stays above other content */
+    
+    box-shadow: 0 6px 15px rgba(0, 0, 0, 0.4); /* Stronger shadow */
+
+    /* Flexbox for structure: Logo left, Title center, Nav right */
+    display: flex;
+    justify-content: space-between; /* Space elements out */
+    align-items: center; /* Vertically align items */
+}
+
+.header-logo {
+    font-size: 1.8em;
+    font-weight: 800; /* Boldest weight */
+    color: var(--csk-yellow);
+    text-shadow: 1px 1px 3px rgba(0, 0, 0, 0.6);
+    text-transform: uppercase;
+}
+
+header h1 {
+    /* Style the main title */
+    font-size: 2.5em;
+    font-weight: 800;
+    color: var(--text-light);
+    margin: 0; /* Remove default margin */
+    text-shadow: 2px 2px 4px rgba(0, 0, 0, 0.7);
+    text-transform: uppercase;
+    text-align: center; /* Center the title visually */
+}
+
+nav {
+    display: flex; /* Make navigation links also a flex container */
+    gap: 15px; /* Space between links */
+}
+
+nav a {
+    color: var(--text-light);
+    text-decoration: none;
+    font-weight: 700;
+    font-size: 1em;
+    padding: 10px 15px;
+    border: 2px solid var(--csk-yellow); /* Border makes it look like a button */
+    border-radius: 5px;
+    transition: all 0.3s ease; /* Smooth transition for interactivity */
+    background-color: transparent;
+}
+
+nav a:hover {
+    background-color: var(--csk-yellow); /* Hover effect: fill with yellow */
+    color: var(--csk-blue); /* Text changes to blue */
+    transform: translateY(-2px); /* Subtle lift effect */
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.4);
+}
+
+/* --- Player Page Specific Styling (Existing) --- */
+
+.player-name-heading {
+    text-align: center;
+    font-size: 2.5em;
+    color: var(--csk-blue);
+    margin-bottom: 20px;
+    border-bottom: 6px solid var(--csk-yellow); /* Prominent yellow underline */
+    display: inline-block;
+    padding-bottom: 10px;
+    width: 100%;
+}
+
+.player-image-section {
+    text-align: center;
+    margin-bottom: 3px;
+    padding: 10px 0; 
+    background-color: var(--section-bg);
+    border-radius: 12px;
+    box-shadow: 0 4px 15px rgba(0, 0, 0, 0.05);
+}
+
+.profile-image {
+    max-width: 90%; 
+    width: 350px; 
+    
+    height: auto; 
+    object-fit: contain; 
+    
+    border-radius: 15px;
+    box-shadow: 0 10px 20px rgba(0, 0, 0, 0.4); 
+}
+
+.player-profile {
+    padding: 30px;
+    background-color: var(--text-light);
+    border: 1px solid #eee;
+    border-radius: 12px;
+    line-height: 1.8;
+}
+
+.player-profile h3, .player-profile h4 {
+    color: var(--csk-blue);
+    border-bottom: 2px solid var(--csk-yellow);
+    padding-bottom: 5px;
+    margin-top: 25px;
+}
+
+.player-profile ul {
+    list-style-type: none; 
+    padding-left: 0;
+}
+
+.player-profile ul li {
+    background: url('data:image/svg+xml;utf8,<svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" viewBox="0 0 16 16"><path fill="%23002d62" d="M10.97 4.97a.75.75 0 0 1 1.07 1.05l-3.99 4.99a.75.75 0 0 1-1.08.02L4.32 8.35a.75.75 0 1 1 1.06-1.06l2.09 2.09 3.44-4.25z"/></svg>') no-repeat left center;
+    background-size: 16px;
+    padding-left: 25px;
+    margin-bottom: 8px;
+    font-weight: 500;
+}
+
+
+/* --- Existing Styles (Ensure they are preserved) --- */
+
+/* Main Content */
+main {
+    padding: 40px 20px;
+    max-width: 1100px;
+    margin: 30px auto;
+    background-color: var(--text-light); 
+    border-radius: 12px;
+    box-shadow: 0 10px 25px rgba(168, 138, 18, 0.3); 
+}
+
+/* Footer & Contact Details */
+footer {
+    text-align: center;
+    padding: 30px;
+    background-color: var(--csk-yellow); 
+    color: var(--csk-blue); 
+    margin-top: 50px;
+    font-size: 1em;
+    font-weight: 600;
+    box-shadow: 0 -4px 8px rgba(0, 0, 0, 0.2);
+}
+
+/* --- UPDATED: Wikipedia Link Button Styles (Existing) --- */
+.player-profile .wiki-link {
+    margin-top: 25px;
+    text-align: right; 
+}
+
+.player-profile .wiki-link a {
+    color: var(--csk-blue);
+    font-weight: 700;
+    text-decoration: none;
+    padding: 10px 18px; 
+    border: 2px solid var(--csk-blue);
+    background-color: var(--csk-yellow); 
+    border-radius: 8px; 
+    transition: all 0.3s ease; 
+    box-shadow: 0 2px 5px rgba(0, 0, 0, 0.2);
+    display: inline-flex; 
+    align-items: center; 
+    justify-content: center;
+    display: inline-flex; 
+}
+
+.player-profile .wiki-link a:hover {
+    background-color: var(--csk-blue); 
+    color: var(--text-light); 
+    border-color: var(--csk-yellow); 
+    transform: translateY(-1px); 
+    text-decoration: none;
+}
+
+.wiki-link a svg {
+    margin-left: 8px; 
+    width: 18px; 
+    height: 18px;
+    fill: var(--csk-blue); 
+    transition: fill 0.3s ease;
+}
+
+.wiki-link a:hover svg {
+    fill: var(--text-light); 
+}
+
+
+/* --- NEW STYLES FOR SQUAD, STATS, AND LEGACY PAGES --- */
+
+/* --- Table Styling (For Squad and Stats Hub) --- */
+main table {
+    width: 90%;
+    margin: 30px auto;
+    border-collapse: collapse;
+    background-color: var(--section-bg); 
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+    font-size: 0.9em;
+    border-radius: 8px;
+    overflow: hidden; 
+}
+
+/* Table Header (The 'Yellove' touch) */
+main table thead {
+    background-color: var(--csk-yellow);
+    color: var(--csk-blue);
+}
+
+main table th {
+    padding: 12px 15px;
+    text-align: left;
+    font-weight: bold;
+    border-bottom: 2px solid var(--csk-blue);
+}
+
+/* Table Body Rows */
+main table td {
+    padding: 10px 15px;
+    border-bottom: 1px solid #ddd;
+    color: var(--text-dark);
+}
+
+/* Stripe effect for readability */
+main table tbody tr:nth-child(even) {
+    background-color: #f0f0f0; 
+}
+
+/* Hover effect for interactivity */
+main table tbody tr:hover {
+    background-color: #ffe066; /* Lighter yellow on hover */
+}
+
+/* Styling for links within the table (e.g., 'View Profile') */
+main table a {
+    color: var(--csk-blue); 
+    text-decoration: none;
+    font-weight: bold;
+}
+
+main table a:hover {
+    text-decoration: underline;
+}
+
+/* --- Legacy Page Styling (Trophy Cabinet) --- */
+.legacy-list {
+    display: flex;
+    flex-direction: column;
+    gap: 25px;
+    padding: 20px;
+    max-width: 800px;
+    margin: 20px auto;
+}
+
+.legacy-list h3 {
+    background-color: var(--csk-yellow); /* Highlight color */
+    color: var(--csk-blue); /* Dark text for contrast */
+    padding: 10px 15px;
+    border-radius: 5px;
+    margin-top: 0;
+    /* Use Blue stripe for visual appeal */
+    border-left: 5px solid var(--csk-blue);
+}
+
+.legacy-list p {
+    margin-left: 20px;
+    line-height: 1.6;
+}
+
+/* Styling for the All-Time Records list */
+main ul.records-list {
+    /* Use a different class if this list needs separate styling from .player-profile ul */
+    list-style: disc inside;
+    padding-left: 20px;
+    line-height: 1.8;
+}
+
+main ul.records-list li {
+    margin-bottom: 5px;
+}
+
+/* --- Responsive adjustments (Existing + New Table Rule) --- */
+@media (max-width: 768px) {
+    header {
+        flex-direction: column; /* Stack logo, title, and nav on mobile */
+        padding: 15px 10px;
+    }
+    .header-logo {
+        margin-bottom: 10px;
+    }
+    header h1 {
+        font-size: 1.5em;
+        margin-bottom: 15px;
+    }
+    nav {
+        flex-direction: column; /* Stack links vertically */
+        gap: 8px;
+        width: 100%;
+        align-items: center;
+    }
+    nav a {
+        width: 80%;
+        text-align: center;
+    }
+    .player-card {
+        width: 80%; 
+    }
+    .profile-image {
+        width: 90%; 
+        max-width: 300px; 
+        height: auto; 
+    }
+    .player-name-heading {
+        font-size: 2em;
+    }
+    /* Mobile style for tables: scrollable wrapper */
+    main table {
+        width: 100%;
+        display: block;
+        overflow-x: auto;
+    }
+    /* Prevents the content from getting too small inside the scrolling area */
+    main table th, main table td {
+        white-space: nowrap; 
+    }
+}
